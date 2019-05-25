@@ -692,11 +692,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DotNetCore\\CSharp&DotNet\\CSharp\\CSharpInDepth\\委托\\委托.csproj",
-      "projectName": "委托",
-      "projectPath": "D:\\DotNetCore\\CSharp&DotNet\\CSharp\\CSharpInDepth\\委托\\委托.csproj",
+      "projectUniqueName": "D:\\DotNetCore\\CSharp&DotNet\\CSharp\\CSharpInDepth\\序列化与反序列化\\序列化与反序列化.csproj",
+      "projectName": "序列化与反序列化",
+      "projectPath": "D:\\DotNetCore\\CSharp&DotNet\\CSharp\\CSharpInDepth\\序列化与反序列化\\序列化与反序列化.csproj",
       "packagesPath": "C:\\Users\\Jee\\.nuget\\packages\\",
-      "outputPath": "D:\\DotNetCore\\CSharp&DotNet\\CSharp\\CSharpInDepth\\委托\\obj\\",
+      "outputPath": "D:\\DotNetCore\\CSharp&DotNet\\CSharp\\CSharpInDepth\\序列化与反序列化\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

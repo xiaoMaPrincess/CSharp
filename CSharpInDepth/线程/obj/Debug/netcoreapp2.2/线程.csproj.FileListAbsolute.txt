@@ -1,0 +1,10 @@
+D:\DotNetCore\CSharp&DotNet\CSharp\CSharpInDepth\线程\bin\Debug\netcoreapp2.2\线程.deps.json
+D:\DotNetCore\CSharp&DotNet\CSharp\CSharpInDepth\线程\bin\Debug\netcoreapp2.2\线程.runtimeconfig.json
+D:\DotNetCore\CSharp&DotNet\CSharp\CSharpInDepth\线程\bin\Debug\netcoreapp2.2\线程.runtimeconfig.dev.json
+D:\DotNetCore\CSharp&DotNet\CSharp\CSharpInDepth\线程\bin\Debug\netcoreapp2.2\线程.dll
+D:\DotNetCore\CSharp&DotNet\CSharp\CSharpInDepth\线程\bin\Debug\netcoreapp2.2\线程.pdb
+D:\DotNetCore\CSharp&DotNet\CSharp\CSharpInDepth\线程\obj\Debug\netcoreapp2.2\线程.csproj.CoreCompileInputs.cache
+D:\DotNetCore\CSharp&DotNet\CSharp\CSharpInDepth\线程\obj\Debug\netcoreapp2.2\线程.AssemblyInfoInputs.cache
+D:\DotNetCore\CSharp&DotNet\CSharp\CSharpInDepth\线程\obj\Debug\netcoreapp2.2\线程.AssemblyInfo.cs
+D:\DotNetCore\CSharp&DotNet\CSharp\CSharpInDepth\线程\obj\Debug\netcoreapp2.2\线程.dll
+D:\DotNetCore\CSharp&DotNet\CSharp\CSharpInDepth\线程\obj\Debug\netcoreapp2.2\线程.pdb
