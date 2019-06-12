@@ -13,7 +13,6 @@ Migrations/
 *.pubxml
 
 # User-specific files
-*.suo
 *.user
 *.userosscache
 *.sln.docstates
@@ -38,6 +37,7 @@ bld/
 
 # Visual Studio 2015 cache/options directory
 .vs/
+v15/
 # Uncomment if you have tasks that create the project's static files in wwwroot
 #wwwroot/
 
