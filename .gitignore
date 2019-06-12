@@ -23,6 +23,8 @@ Migrations/
 *.userprefs
 
 # Build results
+Debug/
+netcoreapp2.2/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
