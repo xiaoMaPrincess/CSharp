@@ -14,8 +14,9 @@ namespace 线程
             //Task<int> t = Task.Run(() =>Sum(100));
             //t.ContinueWith(task => Console.WriteLine($"sum: {task.Result}"),TaskContinuationOptions.OnlyOnCanceled);
             //t.ContinueWith(task => Console.WriteLine($"sum: {task.Result}"));
-            Status();
-           // Thread.Sleep(10000);// 模拟任务10秒
+            //Status();
+            // Thread.Sleep(10000);// 模拟任务10秒
+            MyAsync(5);
             Console.WriteLine("主线程继续工作.....");
 
 
@@ -78,14 +79,60 @@ namespace 线程
             }
             return sum;
         }
-
-        private static async void Status()
+        // 异步任务
+        private static async Task<string> Status()
         {
-           await Task.Run(() =>
+          var ss= await Task.Run(() =>
             {
                 Thread.Sleep(1000);
                 Console.WriteLine("异步调用");
+                return "abcd";
+
+            });
+            return ss;
+        }
+
+        private static async Task<Type1> Method1()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                Console.WriteLine("444");
+            }
+            return await Task.Run(() =>
+            {
+                Console.WriteLine("111");
+                return new Type1();
+            }); 
+
+        }
+
+        private static async Task<Type2> Method2()
+        {
+            for (int i = 0; i < 100; i++)
+            {
+                Console.WriteLine("5");
+            }
+            return await Task.Run(() =>
+            {
+                Console.WriteLine("222");
+                return new Type2();
             });
         }
+
+        private static async Task<string> MyAsync(int value)
+        {
+            //for (int i = 0; i < 3; i++)
+            //{
+            //    var type2 = await Method2();
+            //}
+            Method2();
+           await Method1();
+            Console.WriteLine("333");
+            
+            return "done";
+        }
     }
+    internal sealed class Type1 { }
+    internal sealed class Type2 { }
+
 }
