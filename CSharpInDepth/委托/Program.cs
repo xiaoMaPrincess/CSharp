@@ -8,19 +8,39 @@ namespace 委托
         internal delegate void Feedback(int value);
         static void Main(string[] args)
         {
-            Program p = new Program();
-            StaticDelegateDemo();
-            InstanceDelegateDemo();
-            ChainDelegateDemo(p);
-            ChainDelegateDemo2(p);
-            Console.WriteLine("Hello World!");
-            string[] names = { "Jeff", "Jee", "aa", "bb" };
+            #region Clr C#
+            //Program p = new Program();
+            //StaticDelegateDemo();
+            //InstanceDelegateDemo();
+            //ChainDelegateDemo(p);
+            //ChainDelegateDemo2(p);
+            //Console.WriteLine("Hello World!");
+            //string[] names = { "Jeff", "Jee", "aa", "bb" };
             //char find = 'e';
             //names= Array.FindAll(names, name => name.IndexOf(find) >= 0);
             //Array.ForEach(names, Console.WriteLine);
+            #endregion
+
+            #region C# In Depth
+
+            Person jon = new Person("jon");
+            Person tom = new Person("tom");
+            // 声明委托实例
+            StringProcessor jonVoice, tomVoice, background;
+            jonVoice = new StringProcessor(jon.Say);
+            tomVoice = new StringProcessor(tom.Say);
+            background = new StringProcessor(Background.Note);
+            // 调用委托实例
+            jonVoice("hello"); // 简式调用
+            tomVoice.Invoke("world"); // 显示调用
+            background("back");
+            #endregion
+
             Console.ReadKey();
         }
-        
+
+
+        #region Clr C#
         /// <summary>
         /// 静态调用
         /// </summary>
@@ -116,5 +136,37 @@ namespace 委托
         {
             Console.WriteLine("Item=" + value);
         }
+        #endregion
+
+
+        #region C# In Depth
+
+        // 1.声明委托类型
+        delegate void StringProcessor(string input);
+
+        class Person
+        {
+            string name;
+            public Person(string name)
+            {
+                this.name = name;
+            }
+            // 2.声明兼容的实例方法
+            public void Say(string message)
+            {
+                Console.WriteLine($"{name} say: {message}");
+            }
+        }
+
+        class Background
+        {
+            // 3.声明兼容的静态方法
+            public static void Note(string note)
+            {
+                Console.WriteLine($"({note})");
+            }
+        }
+        #endregion
+
     }
 }
