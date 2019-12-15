@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace 委托
 {
@@ -30,15 +31,34 @@ namespace 委托
             jonVoice = new StringProcessor(jon.Say);
             tomVoice = new StringProcessor(tom.Say);
             background = new StringProcessor(Background.Note);
+            jonVoice += tomVoice;
             // 调用委托实例
             jonVoice("hello"); // 简式调用
-            tomVoice.Invoke("world"); // 显示调用
-            background("back");
+            //tomVoice.Invoke("world"); // 显示调用
+            //background("back");
             #endregion
 
+            Test test = new Test();
+            test.Name = "ss";
+            //Test test2 = test;
+            Console.WriteLine(test.Name);
+            //test2.Name = "sdsds";
+            Console.WriteLine(test.Name);
+            StringBuilder sb = new StringBuilder();
+            sb.Append("a");
+            Console.WriteLine(sb.ToString());
+            //Console.WriteLine(test2.Name);
+            Program.GetClone(test,sb);
+            Console.WriteLine(sb.ToString());
             Console.ReadKey();
         }
 
+        public static void GetClone(Test test,StringBuilder sb)
+        {
+            sb.Append("b");
+            Console.WriteLine(test.Name);
+        }
+        
 
         #region Clr C#
         /// <summary>
@@ -168,5 +188,9 @@ namespace 委托
         }
         #endregion
 
+    }
+    public class Test
+    {
+        public string Name { get; set; }
     }
 }
